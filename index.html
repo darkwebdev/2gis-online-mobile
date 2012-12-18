@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
+        <link href="http://maps.2gis.ru/assets/ff4260b9/online_min.css?959767155" rel="stylesheet">
+        <link href="main.css" rel="stylesheet">
+        <title>Новосибирск. 2ГИС Онлайн.</title>
+        <script src="http://maps.api.2gis.ru/1.0/"></script>
+        <script>
+           DG.autoload(function() {
+               var myMap = new DG.Map('mapDiv');
+               myMap.setCenter(new DG.GeoPoint(82.927810142519,55.028936234826), 15);
+           });
+        </script>
+
+    </head>
+    <body class="dg-body">
+        <div class="dg-head">
+            <div class="dg-logo"><img src="http://maps.2gis.ru/images/layout/2gis_logo.png" /></div>
+            <div class="dg-head-middle">
+                <form class="dg-search-form" id="firms-places-tab"><p class="dg-search-cell dg-search-cell-what"><input type="text" id="search-what" class="dg-textinput" placeholder="Организации, адреса, маршруты или остановки" tabindex="1" autofocus="" x-webkit-speech="" autocomplete="off" /></p>
+                    <p class="dg-search-cell dg-search-cell-where"><span class="dg-textinput">
+                        <span class="dg-location"><a class="pseudo" href="javascript: void(0);">Новосибирск</a></span>
+                        <span class="dg-textinput-inner-wrap">
+                            <input type="text" id="search-where" class="dg-textinput-inner" placeholder="Город, район, улица" tabindex="2" autocomplete="off">
+                        </span>
+                    </span></p>
+                    <p class="dg-search-cell-submit"><input type="submit" class="dg-search-submit" value="Найти" tabindex="3"></p>
+                </form>
+            </div>
+            <ul class="dg-tools-links">
+                <li class="dg-tools-item"><a title="Поделиться ссылкой" class="dg-btn share" href="javascript:void(0)"> <span class="icon"></span> </a></li>
+                <li class="dg-tools-item"><a title="Напечатать страницу" class="dg-btn print" href="javascript:void(0);"> <span class="icon"></span> </a></li>
+                <li class="dg-tools-item"><a title="Обратная связь" class="dg-btn feedback" href="javascript:void(0)"> <span class="icon"></span> </a></li>
+            </ul>
+        </div>
+        <div  class="dg-main dg-sidebar-hidden">
+            <div class="dg-sidebar antiscroll-wrap" id="dgCatalogContainer"></div>
+            <div  style="" class="dg-sidebar-toggler">«</div>
+            <div class="dg-content">
+                <div class="dg-map-wrap">
+                    <div style="width: 100%; height: 100%;" id="mapDiv" class="map olMap"></div>
+                </div>
+            </div>
+            <!-- /content -->
+        </div>
+    </body>
+</html>

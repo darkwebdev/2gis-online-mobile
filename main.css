@@ -1,0 +1,80 @@
+.dg-head {
+    min-width: 0;
+}
+.dg-main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    min-width: 0;
+}
+.dg-content,
+.dg-map-wrap {
+    height: 100%;
+}
+
+/* Netbooks, medium screen height */
+
+@media (max-height:500px) {
+    .dg-head {
+        position: absolute;
+        left: 0;
+        top: -30px;
+        width: 100%;
+        height: 70px;
+        background: rgba(255,255,255, .8);
+    }
+    .dg-textinput, .dg-textinput-inner { background: transparent; }
+    .dg-textinput:focus, .dg-textinput.dg-focus { background: rgba(255,255,255, .8)}
+    .dg-map-btn-fullscreen { display: none !important; }
+}
+
+/* Netbooks, medium screen width */
+
+@media (max-width:1000px) {
+    .dg-tools-links { display: none; }
+}
+
+/* Tablets low screen width */
+
+@media (max-width:800px) {
+    .dg-head {
+        top: 0;
+        height: 77px;
+    }
+    .dg-logo {
+        display: none;
+    }
+    .dg-head-middle {
+        top: 0;
+        left: 0;
+        right: 12px;
+        min-width: 0;
+    }
+    .dg-search-cell {
+        margin: 2px -1px;
+        width: 100%;
+    }
+    .dg-search-cell-what {
+        left: auto;
+    }
+    .dg-textinput, .dg-textinput-inner { background: transparent; }
+    .dg-textinput:focus, .dg-textinput.dg-focus { background: rgba(255,255,255, .8)}
+    .dg-search-cell-submit { top: 20px; }
+    .dg-map-btn-fullscreen { display: none !important; }
+}
+
+/* Smartphones, very low screen width */
+
+@media (max-width:350px) {
+    .dg-head { height: 116px; }
+    .dg-head-middle { right: -2px; }
+    .dg-search-form { margin-right: auto; }
+    .dg-search-cell-submit {
+        margin-left: 40px;
+        top: 78px;
+        left: 50%;
+    }
+}
